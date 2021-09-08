@@ -71,7 +71,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else :
             sendMarkup(start_string, context.bot, update, reply_markup)
     else :
-        sendMessage(f"Oops! not a Authorized user.", context.bot, update)
+        sendMessage(f"Hey {u_men},/n/nIf You Want To Use Me, You Have To Join @Tony_Leech_Zone/n/nNOTE : All The Uploaded Links Will Be Sent Here In Your Private Chat From Now.", context.bot, update)
 
 
 def restart(update, context):
