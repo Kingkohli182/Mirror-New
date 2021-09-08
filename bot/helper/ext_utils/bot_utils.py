@@ -157,7 +157,7 @@ def get_readable_message():
             INDEX += 1
             if INDEX > COUNT:
                 msg += f"<b>📁 Filename:</b> <code>{download.name()}</code>"
-                msg += f"\n<b>ℹ️ Status:</b> <i>{download.status()}</i>"
+                msg += f"\n<b>📊 Status:</b> <i>{download.status()}</i>"
                 if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                     msg += f"\n<code>{get_progress_bar_string(download)} {download.progress()}</code>"
                     if download.status() == MirrorStatus.STATUS_DOWNLOADING:
@@ -167,7 +167,7 @@ def get_readable_message():
                     else:
                         msg += f"\n<b>📤 Uploaded:</b> {get_readable_file_size(download.processed_bytes())}<b>\n<b>⚙️ Engine: ʀᴄʟᴏɴᴇ</b>\n💾 Size</b>: {download.size()}"
                     msg += f"\n<b>⚡ Speed:</b> {download.speed()}" \
-                            f"\n<b>⏲️ ETA:</b> {download.eta()} "
+                            f"\n<b>⏱️ ETA:</b> {download.eta()} "
                     # if hasattr(download, 'is_torrent'):
                     try:
                         msg += f"\n<b>👥 User:</b> <b>{download.message.from_user.first_name}</b>\n<b>⚠️ Warn:</b><code>/warn {download.message.from_user.id}</code>"
